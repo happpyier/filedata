@@ -3,6 +3,10 @@ var app = express();
 var pg = require('pg');
 var path = require("path");
 var url = require("url");
+function submitQuery()
+{
+	alert('This is a test.');
+}
 app.set('port', (process.env.PORT || 5000));
 app.set("Content-Type", "text/html");
 app.get('/', function(request, response) {
