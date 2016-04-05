@@ -5,12 +5,12 @@
 		{
 			var fileInput =  document.getElementById("fUpload");
 			try{
-				alert(fileInput.files[0].size); // Size returned in bytes.
+				alert('File Size: '+fileInput.files[0].size); // Size returned in bytes.
 			}catch(e){
 				var objFSO = new ActiveXObject("Scripting.FileSystemObject");
 				var e = objFSO.getFile( fileInput.value);
 				var fileSize = e.size;
-				alert(fileSize);    
+				alert('File Size: '+fileSize);    
 			}
 		}
 	</script>
