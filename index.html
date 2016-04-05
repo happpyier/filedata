@@ -1,9 +1,17 @@
 <html>
 	<head>
 	<script> 
-		function submitQuery()
+		function findSize() 
 		{
-			alert('This is a test.');
+			var fileInput =  document.getElementById("fUpload");
+			try{
+				alert(fileInput.files[0].size); // Size returned in bytes.
+			}catch(e){
+				var objFSO = new ActiveXObject("Scripting.FileSystemObject");
+				var e = objFSO.getFile( fileInput.value);
+				var fileSize = e.size;
+				alert(fileSize);    
+			}
 		}
 	</script>
 		<style>
@@ -27,7 +35,7 @@
 			</div>
 			<div>
 				<form>
-					<input type='file' id='file' name='file'> </input> <span> <button onclick='submitQuery()'> Upload </button> </span>
+					<input type='file' id='fUpload' name='file'> </input> <span> <button onclick='submitQuery()'> Upload </button> </span>
 				</form>
 			</div>
 		</div>
