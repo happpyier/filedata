@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<script src="script.js"> </script>
+		<style>
+			h1 { font-size: 36px }
+			h2 { font-size: 20px }
+			h2 { font-size: 26px }
+			p { font-size: 16px }
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1> File Metadata Microservice </h1>
+			<div> 
+				<h2> User Stories </h2>
+				<p> 
+					1) I can submit a FormData object that includes a file upload.
+				</p>
+				<p> 
+					2) When I submit something, I will receive the file size in bytes within the JSON response
+				</p>
+			</div>
+			<div>
+				<form>
+					<input type='file' id='file' name='file'> </input> <span> <button onclick='submitQuery()'> Upload </button> </span>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
